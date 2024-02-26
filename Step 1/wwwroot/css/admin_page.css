@@ -1,0 +1,74 @@
+﻿@media only screen and (max-width: 1024px) .delegation-infoMsg, .info-view-msg, .login-footer, .otherProducts, body {
+	min-width: 1024px;
+}
+
+.overlay-full {
+	width: 100%;
+	height: 100%;
+	background: #fafafa;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	position: fixed;
+	display: none;
+}
+
+.overlay-full .progress-box {
+	left: 50%;
+	margin-left: -200px;
+	position: absolute;
+	top: 50%;
+	width: 400px;
+}
+
+.overlay-full .progress-status {
+	height: 30px;
+	display: block;
+	text-align: center;
+}
+
+.overlay-full.show {
+	display: block;
+}
+
+html {
+	font-size: 10px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+.jcrop-tracker, html {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.dashboard-bg-color {
+	background-color: #F0F1F3;
+}
+
+body {
+	font-family: verdana,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+	font-size: 11px;
+	line-height: 1.6;
+	color: #000;
+	background-color: #fff;
+	-ms-overflow-style: scrollbar;
+	margin: 0;
+}
+
+.img-thumbnail, body {
+	background-color: #fff;
+}
+
+address, body, dd, dt {
+	line-height: 1.6;
+}
+
+.admp-top-pane {
+	height: 75px;
+	background: #424f56;
+	position: fixed;
+	width: 100%;
+	z-index: 1002;
+	top: 0;
+	left: 0;
+}
