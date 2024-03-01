@@ -1,0 +1,170 @@
+﻿@{
+    Layout = null;
+}
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="~/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <title>@ViewData["Title"]AD Manager - Admin Page</title>
+    <link rel="icon" type="image/x-icon" href="https://demo.admanagerplus.com/images/favicon.ico"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/admin_page.css" asp-append-version="true" />    
+    <link rel="stylesheet" href="~/AD_Manager.styles.css" asp-append-version="true" />
+    </head>
+    <body leftmargin ="0" topmargin="0" marginwidth="0" marginheight="0" class="noscroll dashboard-bg-color">
+    <div class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="logo">
+                    <a href="https://localhost:7207" title="ManageEngine ADManager Plus"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#" onclick="showContent('home')">主頁</a></li>
+            <li><a href="#" onclick="showContent('admin')">AD管理</a></li>
+            <li><a href="#" onclick="showContent('b1')">備用1</a></li>
+            <li><a href="#" onclick="showContent('b2')">備用2</a></li>
+            <li><a href="#" onclick="showContent('b3')">備用3</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="content active">
+        <p>這是主頁的內容。</p>
+    </div>
+    <div id="admin" class="content">
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#" onclick="showSidebarContent('user-management')"><i class="fas fa-user"></i>用戶管理</a></li>
+                    <li><a href="#" onclick="showSidebarContent('computer-management')"><i class="fa-solid fa-computer"></i>&nbsp&nbsp電腦管理</a></li>
+                    <li><a href="#" onclick="showSidebarContent('group-management')"><i class="fa-solid fa-layer-group"></i>&nbsp&nbsp組管理</a></li>
+                    <li><a href="#" onclick="showSidebarContent('contact-management')"><i class="fa-solid fa-address-card"></i>&nbsp&nbsp連絡人管理</a></li>
+                    <li><a href="#" onclick="showSidebarContent('mailbox-management')"><i class="fa-solid fa-envelope"></i>&nbsp&nbsp郵箱管理</a></li>
+                </ul>                
+            </div>
+            <div class="main_content">
+                <!--user management-->
+                <div id="user-management" class="sidebar-content sidebar-active">
+                    <div class="page-header index-page-header">
+                        <h1>用戶管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    創建用戶&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><span>創建單個用戶</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>批量創建用戶</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--computer-management-->
+                <div id="computer-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>電腦管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    電腦的創建&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--group-management-->
+                <div id="group-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>組管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    組創建&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--contact management-->
+                <div id="contact-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>連絡人管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    創建連絡人&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--mailbox management-->
+                <div id="mailbox-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>共用郵箱管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    共用郵箱的創見&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="b1" class="content">
+        <p>這是備用1的內容。</p>
+    </div>
+    <div id="b2" class="content">
+        <p>這是備用2的內容。</p>
+    </div>
+    <div id="b3" class="content">
+        <p>這是備用3的內容。</p>
+    </div>
+    </body>
+</html>
