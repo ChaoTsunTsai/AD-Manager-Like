@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="~/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <title>@ViewData["Title"]AD Manager - Admin Page</title>
+    <link rel="icon" type="image/x-icon" href="https://demo.admanagerplus.com/images/favicon.ico" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/admin_page.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/create_single_user.css" asp-append-version="true" />    
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="noscroll dashboard-bg-color">
+    <div class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="logo">
+                    <a href="https://localhost:7207" title="ManageEngine ADManager Plus"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li id="home-li" class="navbar-li"><a href="#">主頁</a></li>
+            <li id="admin-li" class="navbar-li navbar-li-active"><a href="#">AD管理</a></li>
+            <li id="b1-li" class="navbar-li"><a href="#">備用1</a></li>
+            <li id="b2-li" class="navbar-li"><a href="#">備用2</a></li>
+            <li id="b3-li" class="navbar-li"><a href="#">備用3</a></li>
+        </ul>
+    </nav>
+    <div class="admp-body-pane modal-fullscreen width">
+        <div class="page-header">
+            <h1 class="pull-left">
+                <span class="grayColoredTxt" style="vertical-align: sub;">創建單個</span><span class="blueColoredTxt" style="vertical-align: sub;">用戶</span>
+            </h1>
+        </div>
+        <div class="admp-layout-pane">
+            <div class="row">
+                <div class="col-md-3">
+                    <span class="admp-pr-15">選擇的域</span>
+                </div>
+                <!--<div class="col-md-3">
+                    <span class="admp-pr-15">選擇的範本</span>
+                </div>-->
+            </div>
+            <div class="navbar">
+                <a href="#" class="nav-item" onclick="showContent('general')">General</a>
+                <a href="#" class="nav-item" onclick="showContent('account')">Account</a>
+            </div>
+            <div id="general" class="content" style="display: none;">
+                <p>General content...</p>
+            </div>
+            <div id="account" class="content" style="display: none;">
+                <p>Account content...</p>
+            </div>
+            <div id="general" class="content" style="display: none;">
+                <p>General content...</p>
+            </div>
+            <div id="account" class="content" style="display: none;">
+                <p>Account content...</p>
+            </div>
+        </div>
+    </div>
+</body>

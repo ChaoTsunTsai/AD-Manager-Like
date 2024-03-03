@@ -1,0 +1,50 @@
+﻿.admp-body-pane {
+	position: relative;		
+	padding: 0 15px;
+	height: auto;
+}
+
+.admp-body-pane.full-width {
+    margin-left: 0;
+}
+
+.admp-layout-pane, .admp-layout-pane * {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+.admp-layout-pane .bdr-box-container.layout {
+	margin-top: 15px !important;
+	margin-bottom: 13px !important;
+	width: 100%;
+}
+
+.bdr-box-container {
+	width: 100%;
+}
+
+.create-user-navbar {
+    background-color: white;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+
+.create-user-nav-item {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-top: 3px solid transparent;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+.nav-item.active {
+    border-color: black;
+}

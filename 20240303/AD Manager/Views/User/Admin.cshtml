@@ -1,0 +1,227 @@
+﻿@{
+    Layout = null;
+}
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="~/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <title>@ViewData["Title"]AD Manager - Admin Page</title>
+    <link rel="icon" type="image/x-icon" href="https://demo.admanagerplus.com/images/favicon.ico"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/admin_page.css" asp-append-version="true" />    
+    </head>
+    <body leftmargin ="0" topmargin="0" marginwidth="0" marginheight="0" class="noscroll dashboard-bg-color">
+    <div class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="logo">
+                    <a href="https://localhost:7207" title="ManageEngine ADManager Plus"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li id="home-li" class="navbar-li navbar-li-active" onclick="changeNavbarLi('home-li')"><a href="#" onclick="showContent('home')">主頁</a></li>
+            <li id="admin-li" class="navbar-li" onclick="changeNavbarLi('admin-li')"><a href="#" onclick="showContent('admin')">AD管理</a></li>
+            <li id="b1-li" class="navbar-li" onclick="changeNavbarLi('b1-li')"><a href="#" onclick="showContent('b1')">備用1</a></li>
+            <li id="b2-li" class="navbar-li" onclick="changeNavbarLi('b2-li')"><a href="#" onclick="showContent('b2')">備用2</a></li>
+            <li id="b3-li" class="navbar-li" onclick="changeNavbarLi('b3-li')"><a href="#" onclick="showContent('b3')">備用3</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="content active">
+        <p>這是主頁的內容。</p>
+    </div>
+    <div id="admin" class="content">
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul>
+                    <li id="user-management-li" class="sidebar-li sidebar-li-active" onclick="changeSidebarLi('user-management-li')"><a href="#" onclick="showSidebarContent('user-management')"><i class="fas fa-user"></i>用戶管理</a></li>
+                    <li id="computer-management-li" class="sidebar-li" onclick="changeSidebarLi('computer-management-li')"><a href="#" onclick="showSidebarContent('computer-management')"><i class="fa-solid fa-computer"></i>&nbsp&nbsp電腦管理</a></li>
+                    <!--<li id="group-management-li" class="sidebar-li" onclick="changeSidebarLi('group-management-li')"><a href="#" onclick="showSidebarContent('group-management')"><i class="fa-solid fa-layer-group"></i>&nbsp&nbsp組管理</a></li>
+                    <li id="contact-management-li" class="sidebar-li" onclick="changeSidebarLi('contact-management-li')"><a href="#" onclick="showSidebarContent('contact-management')"><i class="fa-solid fa-address-card"></i>&nbsp&nbsp連絡人管理</a></li>
+                    <li id="mailbox-management-li" class="sidebar-li" onclick="changeSidebarLi('mailbox-management-li')"><a href="#" onclick="showSidebarContent('mailbox-management')"><i class="fa-solid fa-envelope"></i>&nbsp&nbsp郵箱管理</a></li>-->
+                </ul>
+            </div>
+            <div class="main_content">
+                <!--user management-->
+                <div id="user-management" class="sidebar-content sidebar-active">
+                    <div class="page-header index-page-header">
+                        <h1>用戶管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    創建用戶&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a asp-controller="User" asp-action="CreateSingleUser"><span>創建單個用戶</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>批量創建用戶</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    用戶修改&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><span>更改單個用戶</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>批量更改用戶</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-header index-page-header">
+                        <h1>批量用戶修改</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    常規屬性&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><span>重置密碼</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>解鎖用戶</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>設定檔屬性</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>自訂屬性</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:hidden" class="menu-heading">
+                                    &nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><span>啟用/禁用用戶</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>刪除用戶</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--computer-management-->
+                <div id="computer-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>電腦管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    電腦的創建&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--group-management-->
+                <div id="group-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>組管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    組創建&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--contact management-->
+                <div id="contact-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>連絡人管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    創建連絡人&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--mailbox management-->
+                <div id="mailbox-management" class="sidebar-content">
+                    <div class="page-header index-page-header">
+                        <h1>共用郵箱管理</h1>
+                    </div>
+                    <div class="list-menu-item index-menu-item">
+                        <div class="row">
+                            <div class="col-md-3 admp-mb-30 admp-pr-35">
+                                <h3 style="visibility:visible" class="menu-heading">
+                                    共用郵箱的創見&nbsp;
+                                </h3>
+                                <div>
+                                    <ul class="menu-list">
+                                        <li><a></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="b1" class="content">
+        <p>這是備用1的內容。</p>
+    </div>
+    <div id="b2" class="content">
+        <p>這是備用2的內容。</p>
+    </div>
+    <div id="b3" class="content">
+        <p>這是備用3的內容。</p>
+    </div>
+    </body>
+</html>
