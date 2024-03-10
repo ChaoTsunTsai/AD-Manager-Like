@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+@model List<ADManager.Models.Entities.UserInformation>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="~/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <title>@ViewData["Title"]AD Manager - Edit Single User</title>
+    <link rel="icon" type="image/x-icon" href="https://demo.admanagerplus.com/images/favicon.ico" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/admin_page.css" asp-append-version="true" />    
+    <link rel="stylesheet" href="~/css/edit_single_user.css" asp-append-version="true" />
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="noscroll dashboard-bg-color">
+    <div class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="logo">
+                    <a href="https://localhost:7034" title="ManageEngine ADManager Plus"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li id="home-li" class="navbar-li"><a href="/User/Admin#home-li">主頁</a></li>
+            <li id="admin-li" class="navbar-li navbar-li-active"><a href="/User/Admin#admin-li">AD管理</a></li>
+            <li id="b1-li" class="navbar-li"><a href="/User/Admin#b1-li">備用1</a></li>
+            <li id="b2-li" class="navbar-li"><a href="/User/Admin#b2-li">備用2</a></li>
+            <li id="b3-li" class="navbar-li"><a href="/User/Admin#b3-li">備用3</a></li>
+        </ul>
+    </nav>
+    <div class="admp-body-pane modal-fullscreen width">
+        <div class="page-header">
+            <h1 class="pull-left">
+                <span class="grayColoredTxt" style="vertical-align: sub;">更改單個</span><span class="blueColoredTxt" style="vertical-align: sub;">用戶</span>
+            </h1>
+        </div>
+        <div class="admp-layout-pane">
+            <!--<div class="col-md-3">
+                    <span class="admp-pr-15">選擇的域</span>
+                </div>
+                <div class="col-md-3">
+                    <span class="admp-pr-15">選擇的範本</span>
+                </div>-->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>帳戶名</th>
+                        <th>顯示名</th>
+                        <th>身分</th>
+                        <th>Email</th>
+                        <th>帳戶密碼</th>
+                        <th></th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@user.Id</td>
+                            <td>@user.LogonName</td>
+                            <td>@user.UserName</td>
+                            <td>@user.Rank</td>
+                            <td>@user.Email</td>
+                            <td>@user.LogonPassword</td>
+                            <td>
+                                <a asp-controller="User" asp-action="EditSingleUser" asp-route-id="@user.Id" class="btn btn-outline-dark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                    </svg>更改
+                                </a>                                
+                            </td>                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>    
+</body>
