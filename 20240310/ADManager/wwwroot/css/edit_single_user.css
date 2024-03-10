@@ -1,0 +1,150 @@
+﻿.admp-body-pane {
+	position: relative;
+	padding: 0 15px;
+	height: auto;
+}
+
+.admp-body-pane.full-width {
+	margin-left: 0;
+}
+
+.admp-layout-pane, .admp-layout-pane * {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+.admp-layout-pane .bdr-box-container.layout {
+	margin-top: 15px !important;
+	margin-bottom: 13px !important;
+	width: 100%;
+}
+
+.bdr-box-container {
+	width: 100%;
+}
+
+.create-user-navbar {
+	background-color: white;
+	overflow: hidden;
+	border-bottom: 1px solid #808080;
+}
+
+.create-user-nav-item {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.create-user-nav-item.active {
+	border-color: black;
+	border-top: 1px solid #c8c8c8;
+	border-left: 1px solid #c8c8c8;
+	border-right: 1px solid #c8c8c8;
+}
+
+.create-user-content {
+	display: none;
+	padding: 20px;
+	border: 1px solid #ccc;
+	margin-top: 20px;
+}
+
+.create-user-content.active {
+	display: block;
+}
+
+.btn {	
+	display: inline-block;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 0 solid transparent;
+	white-space: nowrap;
+	line-height: 1px 18px;
+	padding: 0px 13px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #80ba50;
+}
+
+.form-label {
+	margin-left: 50px;
+}
+
+.form-control {
+	width: 300px;
+	margin-left: 50px;
+}
+
+.radio {
+	margin-left: 50px;
+}
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+.ml-50 {
+	margin-left: 50px;
+}
+
+h1 {
+	font-size: 2em;
+}
+/* 約等於32px */
+h2 {
+	font-size: 1.5em;
+}
+/* 約等於24px */
+h3 {
+	font-size: 1.17em;
+}
+/* 約等於18.72px */
+h4 {
+	font-size: 1em;
+}
+/* 約等於16px */
+h5 {
+	font-size: 0.83em;
+}
+/* 約等於13.28px */
+
+h1, h2, h3, h4, h5 {
+	margin-top: 0.67em; /* 上邊距 */
+	margin-bottom: 0.67em; /* 下邊距 */
+	font-weight: bold; /* 字體加粗 */
+}
+
+.table {
+	border: 2px solid #a1a1a1;	
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: #ccc;
+}
+
+th, td {
+	max-width: 100px; /* 可調整最大寬度以適應你的設計需求 */
+	white-space: nowrap; /* 防止內容換行 */
+	overflow: hidden; /* 隱藏超出部分的內容 */
+	text-overflow: ellipsis; /* 用省略號顯示隱藏的內容 */
+	border: 1px solid #ddd; /* 可選，為了更好的視覺效果 */
+	padding: 8px; /* 可選，為了更好的視覺效果 */
+}
